@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEvento.Views.CadastroEvento"
+             BackgroundColor="{StaticResource MidnightBlue}"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <Label Text="Cadastro de Eventos"
+                   FontFamily="Poppins-Semibold"
+                   TextColor="{StaticResource PrimaryDark}"
+                   FontSize="28"
+                   HorizontalOptions="Center" />
+
+            
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Nome do Evento"
+                       FontFamily="Poppins-Regular"
+                       TextColor="{StaticResource PrimaryDark}"
+                       FontSize="18"/>
+
+                <Entry x:Name="txt_nome"
+                       Placeholder="Digite o nome do evento"/>
+            </VerticalStackLayout>
+
+            
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Local do Evento"
+                       FontFamily="Poppins-Regular"
+                       TextColor="{StaticResource PrimaryDark}"
+                       FontSize="18" />
+
+                <Entry x:Name="txt_local"
+                       Placeholder="Digite o local"/>
+            </VerticalStackLayout>
+
+           
+            <Frame BackgroundColor="{StaticResource PrimaryDark}"
+                   CornerRadius="15"
+                   Padding="15">
+
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Período do Evento"
+                           FontFamily="Poppins-Medium"
+                           FontSize="20"
+                           TextColor="{StaticResource MidnightBlue}"
+                           HorizontalOptions="Center"/>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Data de início:"
+                               FontFamily="Poppins-Light"
+                               TextColor="{StaticResource MidnightBlue}"/>
+
+                        <DatePicker x:Name="dtpck_inicio"
+                                    DateSelected="dtpck_inicio_DateSelected"
+                                    Format="dd/MM/yyyy"
+                                    TextColor="{StaticResource MidnightBlue}"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Data de término:"
+                               FontFamily="Poppins-Light"
+                               TextColor="{StaticResource MidnightBlue}"/>
+
+                        <DatePicker x:Name="dtpck_termino"
+                                    Format="dd/MM/yyyy"
+                                    TextColor="{StaticResource MidnightBlue}"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+            </Frame>
+
+          
+            <Frame BackgroundColor="{StaticResource PrimaryDark}"
+                   CornerRadius="15" Padding="15">
+
+                <HorizontalStackLayout Spacing="25">
+                    <Label Text="Participantes:"
+                           TextColor="{StaticResource MidnightBlue}"
+                           FontFamily="Poppins-Regular"/>
+
+                    <Label Text="{Binding Value}"
+                           FontSize="20"
+                           TextColor="{StaticResource MidnightBlue}"
+                           BindingContext="{x:Reference stp_partici}"/>
+
+                    <Stepper x:Name="stp_partici"
+                             Minimum="0"
+                             Increment="1"
+                             WidthRequest="150"
+                             BackgroundColor="{StaticResource MidnightBlue}"/>
+                </HorizontalStackLayout>
+
+            </Frame>
+
+            
+            <Frame BackgroundColor="{StaticResource PrimaryDark}"
+                   CornerRadius="15"
+                   Padding="15">
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Preço por Participante:"
+                           TextColor="{StaticResource MidnightBlue}"/>
+
+                    <Entry x:Name="txt_preco" Placeholder="Ex: 150" WidthRequest="120" BackgroundColor="{StaticResource MidnightBlue}"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <VerticalStackLayout Spacing="12" Margin="0,10">
+
+                <Button Text="Sobre"
+                        FontFamily="Poppins-Regular"
+                        BackgroundColor="{StaticResource PrimaryDark}"
+                        TextColor="{StaticResource MidnightBlue}"
+                        CornerRadius="12"
+                        Padding="12"
+                        Clicked="OnBtnSobreClicked"/>
+
+                <Button Text="Avançar"
+                        FontFamily="Poppins-Regular"
+                        BackgroundColor="{StaticResource PrimaryDark}"
+                        TextColor="{StaticResource MidnightBlue}"
+                        CornerRadius="12"
+                        Padding="12"
+                        Clicked="Button_Clicked"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

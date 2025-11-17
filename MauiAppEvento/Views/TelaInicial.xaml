@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEvento.Views.TelaInicial"
+             BackgroundColor="{StaticResource MidnightBlue}"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout Padding="30" Spacing="45" VerticalOptions="Center">
+
+        <Label Text="Eventos MAUI"
+               FontFamily="Poppins-Medium"
+               FontSize="48"
+               TextColor="{StaticResource PrimaryDark}"
+               HorizontalOptions="Center" />
+
+        <Label Text="Cadastre agora o seu evento!"
+               FontFamily="Poppins-Light"
+               FontSize="20"
+               TextColor="{StaticResource PrimaryDark}"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Margin="0,0,0,20"/>
+
+        <Button Text="Avançar"
+                FontFamily="Poppins-Regular"
+                BackgroundColor="{StaticResource PrimaryDark}"
+                TextColor="{StaticResource MidnightBlue}"
+                CornerRadius="12"
+                Padding="15"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

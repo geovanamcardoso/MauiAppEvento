@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppEvento.Views.Sobre"
+             BackgroundColor="{StaticResource MidnightBlue}"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout Padding="30" Spacing="35">
+
+        <Label Text="Cadastro de Eventos"
+               FontFamily="Poppins-Regular"
+               FontSize="30"
+               TextColor="{StaticResource PrimaryDark}"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"/>
+
+        <Label Text="Eventos MAUI"
+               FontFamily="Poppins-Medium"
+               FontSize="34"
+               TextColor="{StaticResource PrimaryDark}"
+               HorizontalOptions="Center" />
+
+        <Frame BackgroundColor="{StaticResource PrimaryDark}"
+               CornerRadius="15"
+               Padding="15">
+
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Desenvolvido por: Geovana Maria da Silva Cardoso"
+                       FontFamily="Poppins-Light"
+                       FontSize="18"
+                       TextColor="{StaticResource MidnightBlue}" />
+
+                <Label Text="Ano de Desenvolvimento: 2025"
+                       FontFamily="Poppins-Light"
+                       FontSize="18"
+                       TextColor="{StaticResource MidnightBlue}" />
+
+                <Label Text="Plataforma: .NET MAUI"
+                       FontFamily="Poppins-Light"
+                       FontSize="18"
+                       TextColor="{StaticResource MidnightBlue}" />
+            </VerticalStackLayout>
+
+        </Frame>
+
+        <Button Text="Voltar"
+                BackgroundColor="{StaticResource PrimaryDark}"
+                TextColor="{StaticResource MidnightBlue}"
+                FontFamily="Poppins-Regular"
+                CornerRadius="12"
+                WidthRequest="150"
+                Padding="12"
+                HorizontalOptions="Center"
+                Clicked="OnBtnVoltarClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
