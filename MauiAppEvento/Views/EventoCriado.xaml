@@ -68,7 +68,7 @@
                            FontFamily="Poppins-Light"
                            FontSize="18"
                            TextColor="{StaticResource MidnightBlue}" />
-                    <Label Text="{Binding totalDuracao}"
+                    <Label Text="{Binding DuracaoEmDias}"
                            FontFamily="Poppins-Medium"
                            FontSize="18"
                            TextColor="{StaticResource MidnightBlue}" />

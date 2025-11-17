@@ -14,10 +14,17 @@ namespace MauiAppEvento.Models
         public DateTime DataTermino { get; set; }
         public int QntPartici { get; set; }
         public double valorPartici { get; set; }
-        public int totalDuracao
-        {
-            get => DataTermino.Subtract(DataInicio).Days;
-        }
+
+        //Usando timespan
+        public TimeSpan totalDuracao => DataTermino - DataInicio;
+
+        public int DuracaoEmDias => totalDuracao.Days;
+
+        //Sem timespan
+        //public int totalDuracao
+        //{
+        //    get => DataTermino.Subtract(DataInicio).Days;
+        //}
 
         public double CustoTotal
         {
